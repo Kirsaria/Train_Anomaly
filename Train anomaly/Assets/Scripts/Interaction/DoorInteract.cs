@@ -12,12 +12,14 @@ public class DoorInteract : MonoBehaviour, IInteractable
     public GameObject questionUI;
     public Text questionText;
     private CountAnomaly countAnomaly;
-
+    private GameLevel gameLevel;
+    public InputField anomalyCountInput;
     public void Start()
     {
         countAnomaly = FindObjectOfType<CountAnomaly>();
         yesButton.onClick.AddListener(OnYesClicked);
         noButton.onClick.AddListener(OnNoClicked);
+        anomalyCountInput.onEndEdit.AddListener(OnEndEdit);
     }
     public string GetDescription()
     {
@@ -38,6 +40,20 @@ public class DoorInteract : MonoBehaviour, IInteractable
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
         questionUI.SetActive(true);
+
+        // Управляем отображением элементов в зависимости от уровня сложности
+        if (GameLevel.difficultyLevel == 1) // Уровень с вводом количества
+        {
+            yesButton.gameObject.SetActive(false);
+            noButton.gameObject.SetActive(false);
+            anomalyCountInput.gameObject.SetActive(true);
+        }
+        else // Уровень с кнопками
+        {
+            yesButton.gameObject.SetActive(true);
+            noButton.gameObject.SetActive(true);
+            anomalyCountInput.gameObject.SetActive(false);
+        }
     }
 
     private void CloseAnomalyWindow()
@@ -58,23 +74,42 @@ public class DoorInteract : MonoBehaviour, IInteractable
     {
         CheckAnswer(false);
     }
-
+    private void OnEndEdit(string input)
+    {
+        // Проверяем, если введённый текст не пустой и нажата клавиша Enter
+        if (!string.IsNullOrEmpty(input) && Input.GetKeyDown(KeyCode.Return))
+        {
+            CheckAnswer(false); // Вызываем CheckAnswer с флагом false, так как нажатие Enter не является "Да"
+        }
+    }
     private void CheckAnswer(bool isYesClicked)
     {
-        switch (isYesClicked)
+        switch (GameLevel.difficultyLevel)
         {
-            case true when countAnomaly.anomaliIs:
-                Debug.Log("Correct");
+            case 0: // Уровень с кнопками
+                if ((isYesClicked && countAnomaly.anomaliIs) || (!isYesClicked && !countAnomaly.anomaliIs))
+                {
+                    Debug.Log("Correct");
+                }
+                else
+                {
+                    Debug.Log("Incorrect");
+                }
                 CloseAnomalyWindow();
                 break;
-            case false when !countAnomaly.anomaliIs:
-                Debug.Log("Correct");
+
+            case 1: // Уровень с вводом количества
+                int inputCount;
+                if (int.TryParse(anomalyCountInput.text, out inputCount) && inputCount == countAnomaly.countAnomaly)
+                {
+                    Debug.Log("Correct");
+                }
+                else
+                {
+                    Debug.Log("Incorrect");
+                }
                 CloseAnomalyWindow();
                 break;
-            default:
-                Debug.Log("Incorrect");
-                CloseAnomalyWindow();
-                break;
-        }        
+        }
     }
 }

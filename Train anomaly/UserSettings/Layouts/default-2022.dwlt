@@ -418,9 +418,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 64aefdff
-      m_LastClickedID: -151964
-      m_ExpandedIDs: 28b1fcff64aefdff8899feff2ca0ffffaca1ffff14faffff04fbffff5c5b0000865b0000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: d6e0ffffb8e6ffff4ce9ffff04fbfffff4ffffffd45b000088630000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -821,14 +821,14 @@ MonoBehaviour:
   m_OverrideSceneCullingMask: 6917529027641081856
   m_SceneIsLit: 1
   m_SceneLighting: 1
-  m_2DMode: 0
+  m_2DMode: 1
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.33023208, y: 2.0428429, z: 7.5850677}
+    m_Target: {x: 1109.1038, y: 520.1473, z: 2.6315114}
     speed: 2
-    m_Value: {x: 0.33023208, y: 2.0428429, z: 7.5850677}
+    m_Value: {x: 1098.4674, y: 550.28357, z: 2.9925027}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -874,17 +874,17 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.041332547, y: 0.044088993, z: 0.0025565918, w: -0.9988143}
+    m_Target: {x: 0, y: 0, z: 0, w: 1}
     speed: 2
-    m_Value: {x: 0.041305937, y: 0.04406061, z: 0.0025549459, w: -0.99817127}
+    m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 1.127538
+    m_Target: 838.30133
     speed: 2
-    m_Value: 1.127538
+    m_Value: 802.2022
   m_Ortho:
-    m_Target: 0
+    m_Target: 1
     speed: 2
-    m_Value: 0
+    m_Value: 1
   m_CameraSettings:
     m_Speed: 1
     m_SpeedNormalized: 0.5
@@ -898,7 +898,7 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: -0.11527516, y: 0.08441676, z: -0.009022197, w: -0.9903447}
+  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -1020,7 +1020,7 @@ MonoBehaviour:
     m_SkipHidden: 1
     m_SearchArea: 1
     m_Folders:
-    - Assets/Map
+    - Assets/Scripts
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1028,16 +1028,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 58
   m_LastFolders:
-  - Assets/Map
+  - Assets/Scripts
   m_LastFoldersGridSize: 58
-  m_LastProjectPath: D:\Programming\Train anomaly
+  m_LastProjectPath: D:\Programming\TrainAnomalyGit\Train_Anomaly\Train anomaly
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ee5f0000
-    m_LastClickedID: 24558
-    m_ExpandedIDs: 00000000cc5f0000ee5f0000f25f000000ca9a3bffffff7f
+    m_SelectedIDs: 7e600000
+    m_LastClickedID: 24702
+    m_ExpandedIDs: 000000004a6000007e60000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1065,7 +1065,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000cc5f0000
+    m_ExpandedIDs: 000000004a600000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1092,7 +1092,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c62300004a6a0000226e0000fc62000046c500004acc00000ca20000c666000046650000a2bb00005065000008720000de7100002a870000e66f000064760000747400007cba000038f800001ee90000e2e100007e7c0000de76000028700000fa700000aacf0000ac0601004adf00004ebf00006a470100c0f700002e0401006c740000c28500008a90000074990000befa0000b6fb000074fb0000aefb0000febf0000cc86000084880000b8750000a2920000a892000072750000a8750000a47a0000a27a0000107d00007a860000d08c0000c07c0000147d000070750000ca8300002e9f0000747b0000287b00000279000050a40000f8750000325b000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1196,7 +1196,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 108
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
@@ -1222,9 +1222,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1041.6
+    x: 904
     y: 73.6
-    width: 493.40002
+    width: 631
     height: 701.8
   m_SerializedDataModeController:
     m_DataMode: 0
