@@ -1898,6 +1898,9 @@ MonoBehaviour:
   questionUI: {fileID: 1473275120}
   questionText: {fileID: 214097001}
   anomalyCountInput: {fileID: 534705296}
+  sceneNames:
+  - SampleScene
+  - MainMenu
 --- !u!1 &1360778161
 GameObject:
   m_ObjectHideFlags: 0
@@ -1992,8 +1995,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 282142201}
   - {fileID: 1473275121}
+  - {fileID: 282142201}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

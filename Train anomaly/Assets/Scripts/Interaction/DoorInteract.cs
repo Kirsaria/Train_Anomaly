@@ -14,6 +14,7 @@ public class DoorInteract : MonoBehaviour, IInteractable
     private CountAnomaly countAnomaly;
     private GameLevel gameLevel;
     public InputField anomalyCountInput;
+    public List<string> sceneNames;
     public void Start()
     {
         countAnomaly = FindObjectOfType<CountAnomaly>();
@@ -27,7 +28,18 @@ public class DoorInteract : MonoBehaviour, IInteractable
             return "Нажмите [E], чтобы взаимодействовать";
         else return "";
     }
-
+    private void LoadRandomScene()
+    {
+        if (sceneNames.Count > 0)
+        {
+            int randomIndex = Random.Range(0, sceneNames.Count);
+            SceneManager.LoadScene(sceneNames[randomIndex]); 
+        }
+        else
+        {
+            Debug.LogWarning("Список сцен пуст!");
+        }
+    }
     public void Interact()
     {
         isInteract = true;
@@ -41,14 +53,13 @@ public class DoorInteract : MonoBehaviour, IInteractable
         Cursor.visible = true;
         questionUI.SetActive(true);
 
-        // Управляем отображением элементов в зависимости от уровня сложности
-        if (GameLevel.difficultyLevel == 1) // Уровень с вводом количества
+        if (GameLevel.difficultyLevel == 1) 
         {
             yesButton.gameObject.SetActive(false);
             noButton.gameObject.SetActive(false);
             anomalyCountInput.gameObject.SetActive(true);
         }
-        else // Уровень с кнопками
+        else 
         {
             yesButton.gameObject.SetActive(true);
             noButton.gameObject.SetActive(true);
@@ -76,37 +87,40 @@ public class DoorInteract : MonoBehaviour, IInteractable
     }
     private void OnEndEdit(string input)
     {
-        // Проверяем, если введённый текст не пустой и нажата клавиша Enter
         if (!string.IsNullOrEmpty(input) && Input.GetKeyDown(KeyCode.Return))
         {
-            CheckAnswer(false); // Вызываем CheckAnswer с флагом false, так как нажатие Enter не является "Да"
+            CheckAnswer(false); 
         }
     }
     private void CheckAnswer(bool isYesClicked)
     {
         switch (GameLevel.difficultyLevel)
         {
-            case 0: // Уровень с кнопками
+            case 0: 
                 if ((isYesClicked && countAnomaly.anomaliIs) || (!isYesClicked && !countAnomaly.anomaliIs))
                 {
                     Debug.Log("Correct");
+                    LoadRandomScene();
                 }
                 else
                 {
                     Debug.Log("Incorrect");
+                    SceneManager.LoadScene("MainMenu");
                 }
                 CloseAnomalyWindow();
                 break;
 
-            case 1: // Уровень с вводом количества
+            case 1:
                 int inputCount;
                 if (int.TryParse(anomalyCountInput.text, out inputCount) && inputCount == countAnomaly.countAnomaly)
                 {
                     Debug.Log("Correct");
+                    LoadRandomScene();
                 }
                 else
                 {
                     Debug.Log("Incorrect");
+                    SceneManager.LoadScene("MainMenu");
                 }
                 CloseAnomalyWindow();
                 break;
