@@ -3,18 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class DoorInteract : MonoBehaviour, IInteractable
 {
     public bool isInteract;
     public Button yesButton;
     public Button noButton;
-    public GameObject questionUI;
-    public Text questionText;
+    public GameObject questionUIEasy;
+    public GameObject questionUIHard;
     private CountAnomaly countAnomaly;
-    private GameLevel gameLevel;
-    public InputField anomalyCountInput;
+    public TMP_InputField anomalyCountInput;
     public List<string> sceneNames;
+    public AudioSource buttonClickSound;
+
     public void Start()
     {
         countAnomaly = FindObjectOfType<CountAnomaly>();
@@ -22,24 +24,27 @@ public class DoorInteract : MonoBehaviour, IInteractable
         noButton.onClick.AddListener(OnNoClicked);
         anomalyCountInput.onEndEdit.AddListener(OnEndEdit);
     }
+
     public string GetDescription()
     {
         if (!isInteract)
             return "Нажмите [E], чтобы взаимодействовать";
         else return "";
     }
+
     private void LoadRandomScene()
     {
         if (sceneNames.Count > 0)
         {
             int randomIndex = Random.Range(0, sceneNames.Count);
-            SceneManager.LoadScene(sceneNames[randomIndex]); 
+            SceneManager.LoadScene(sceneNames[randomIndex]);
         }
         else
         {
             Debug.LogWarning("Список сцен пуст!");
         }
     }
+
     public void Interact()
     {
         isInteract = true;
@@ -51,19 +56,14 @@ public class DoorInteract : MonoBehaviour, IInteractable
         Time.timeScale = 0;
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
-        questionUI.SetActive(true);
 
-        if (GameLevel.difficultyLevel == 1) 
+        if (GameLevel.difficultyLevel == 0)
         {
-            yesButton.gameObject.SetActive(false);
-            noButton.gameObject.SetActive(false);
-            anomalyCountInput.gameObject.SetActive(true);
+            questionUIEasy.SetActive(true);
         }
-        else 
+        else
         {
-            yesButton.gameObject.SetActive(true);
-            noButton.gameObject.SetActive(true);
-            anomalyCountInput.gameObject.SetActive(false);
+            questionUIHard.SetActive(true);
         }
     }
 
@@ -72,40 +72,52 @@ public class DoorInteract : MonoBehaviour, IInteractable
         Time.timeScale = 1;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        questionUI.SetActive(false);
+        if (GameLevel.difficultyLevel == 0)
+        {
+            questionUIEasy.SetActive(false);
+        }
+        else
+        {
+            questionUIHard.SetActive(false);
+        }
         isInteract = false;
     }
 
     private void OnYesClicked()
     {
+        PlayButtonClickSound();
         CheckAnswer(true);
     }
 
     private void OnNoClicked()
     {
+        PlayButtonClickSound();
         CheckAnswer(false);
     }
+
     private void OnEndEdit(string input)
     {
         if (!string.IsNullOrEmpty(input) && Input.GetKeyDown(KeyCode.Return))
         {
-            CheckAnswer(false); 
+            PlayButtonClickSound();
+            CheckAnswer(false);
         }
     }
+
     private void CheckAnswer(bool isYesClicked)
     {
         switch (GameLevel.difficultyLevel)
         {
-            case 0: 
+            case 0:
                 if ((isYesClicked && countAnomaly.anomaliIs) || (!isYesClicked && !countAnomaly.anomaliIs))
                 {
                     Debug.Log("Correct");
-                    LoadRandomScene();
+                    Invoke("LoadNextScene", 0.5f);
                 }
                 else
                 {
                     Debug.Log("Incorrect");
-                    SceneManager.LoadScene("MainMenu");
+                    Invoke("AgainScene", 0.5f);
                 }
                 CloseAnomalyWindow();
                 break;
@@ -124,6 +136,21 @@ public class DoorInteract : MonoBehaviour, IInteractable
                 }
                 CloseAnomalyWindow();
                 break;
+        }
+    }
+    private void LoadNextScene()
+    {
+        LoadRandomScene();
+    }
+    private void AgainScene()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+    private void PlayButtonClickSound()
+    {
+        if (buttonClickSound != null)
+        {
+            buttonClickSound.Play(); 
         }
     }
 }
