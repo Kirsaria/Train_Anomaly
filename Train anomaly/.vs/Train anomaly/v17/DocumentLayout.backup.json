@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "D:\\Programming\\TrainAnomalyGit\\Train_Anomaly\\Train anomaly\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{23655510-A890-B0ED-FB37-6B4903F02E5E}|Assembly-CSharp.csproj|d:\\programming\\trainanomalygit\\train_anomaly\\train anomaly\\assets\\scripts\\interaction\\cursorenable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23655510-A890-B0ED-FB37-6B4903F02E5E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interaction\\cursorenable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{23655510-A890-B0ED-FB37-6B4903F02E5E}|Assembly-CSharp.csproj|d:\\programming\\trainanomalygit\\train_anomaly\\train anomaly\\assets\\scripts\\interaction\\doorinteract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{23655510-A890-B0ED-FB37-6B4903F02E5E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interaction\\doorinteract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{23655510-A890-B0ED-FB37-6B4903F02E5E}|Assembly-CSharp.csproj|D:\\Programming\\TrainAnomalyGit\\Train_Anomaly\\Train anomaly\\assets\\scripts\\effectsscripts\\soundbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{23655510-A890-B0ED-FB37-6B4903F02E5E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\effectsscripts\\soundbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{23655510-A890-B0ED-FB37-6B4903F02E5E}|Assembly-CSharp.csproj|D:\\Programming\\TrainAnomalyGit\\Train_Anomaly\\Train anomaly\\assets\\scripts\\interaction\\gamelevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{23655510-A890-B0ED-FB37-6B4903F02E5E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interaction\\gamelevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23655510-A890-B0ED-FB37-6B4903F02E5E}|Assembly-CSharp.csproj|D:\\Programming\\TrainAnomalyGit\\Train_Anomaly\\Train anomaly\\assets\\scripts\\interaction\\resetbuttonstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23655510-A890-B0ED-FB37-6B4903F02E5E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interaction\\resetbuttonstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{23655510-A890-B0ED-FB37-6B4903F02E5E}|Assembly-CSharp.csproj|D:\\Programming\\TrainAnomalyGit\\Train_Anomaly\\Train anomaly\\assets\\scripts\\interaction\\iinteractable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,19 +46,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SoundButton.cs",
-              "DocumentMoniker": "D:\\Programming\\TrainAnomalyGit\\Train_Anomaly\\Train anomaly\\Assets\\Scripts\\EffectsScripts\\SoundButton.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\EffectsScripts\\SoundButton.cs",
-              "ToolTip": "D:\\Programming\\TrainAnomalyGit\\Train_Anomaly\\Train anomaly\\Assets\\Scripts\\EffectsScripts\\SoundButton.cs",
-              "RelativeToolTip": "Assets\\Scripts\\EffectsScripts\\SoundButton.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAbAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "CursorEnable.cs",
+              "DocumentMoniker": "D:\\Programming\\TrainAnomalyGit\\Train_Anomaly\\Train anomaly\\Assets\\Scripts\\Interaction\\CursorEnable.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Interaction\\CursorEnable.cs",
+              "ToolTip": "D:\\Programming\\TrainAnomalyGit\\Train_Anomaly\\Train anomaly\\Assets\\Scripts\\Interaction\\CursorEnable.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Interaction\\CursorEnable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T12:07:01.821Z"
+              "WhenOpened": "2025-02-01T09:27:30.503Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ResetButtonState.cs",
+              "DocumentMoniker": "D:\\Programming\\TrainAnomalyGit\\Train_Anomaly\\Train anomaly\\Assets\\Scripts\\Interaction\\ResetButtonState.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Interaction\\ResetButtonState.cs",
+              "ToolTip": "D:\\Programming\\TrainAnomalyGit\\Train_Anomaly\\Train anomaly\\Assets\\Scripts\\Interaction\\ResetButtonState.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Interaction\\ResetButtonState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-31T18:28:52.714Z"
             },
             {
               "$type": "Document",
@@ -64,26 +81,26 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Interaction\\GameLevel.cs",
               "ToolTip": "D:\\Programming\\TrainAnomalyGit\\Train_Anomaly\\Train anomaly\\Assets\\Scripts\\Interaction\\GameLevel.cs",
               "RelativeToolTip": "Assets\\Scripts\\Interaction\\GameLevel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-28T13:11:58.819Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "DoorInteract.cs",
               "DocumentMoniker": "D:\\Programming\\TrainAnomalyGit\\Train_Anomaly\\Train anomaly\\Assets\\Scripts\\Interaction\\DoorInteract.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Interaction\\DoorInteract.cs",
               "ToolTip": "D:\\Programming\\TrainAnomalyGit\\Train_Anomaly\\Train anomaly\\Assets\\Scripts\\Interaction\\DoorInteract.cs",
               "RelativeToolTip": "Assets\\Scripts\\Interaction\\DoorInteract.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAowDsAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAACYAAAAAAAAAAAAgwDoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-25T10:24:08.079Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "IInteractable.cs",
               "DocumentMoniker": "D:\\Programming\\TrainAnomalyGit\\Train_Anomaly\\Train anomaly\\Assets\\Scripts\\Interaction\\IInteractable.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Interaction\\IInteractable.cs",
@@ -95,7 +112,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "PlayerInteraction.cs",
               "DocumentMoniker": "D:\\Programming\\TrainAnomalyGit\\Train_Anomaly\\Train anomaly\\Assets\\Scripts\\Interaction\\PlayerInteraction.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Interaction\\PlayerInteraction.cs",
@@ -107,7 +124,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "D:\\Programming\\TrainAnomalyGit\\Train_Anomaly\\Train anomaly\\Assets\\Scripts\\PlayerScripts\\PlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerScripts\\PlayerController.cs",
@@ -119,7 +136,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "CameraController.cs",
               "DocumentMoniker": "D:\\Programming\\TrainAnomalyGit\\Train_Anomaly\\Train anomaly\\Assets\\Scripts\\PlayerScripts\\CameraController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerScripts\\CameraController.cs",
@@ -131,7 +148,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "CountAnomaly.cs",
               "DocumentMoniker": "D:\\Programming\\TrainAnomalyGit\\Train_Anomaly\\Train anomaly\\Assets\\Scripts\\Interaction\\CountAnomaly.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Interaction\\CountAnomaly.cs",

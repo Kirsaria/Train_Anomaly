@@ -5,20 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class GameLevel : MonoBehaviour
 {
-    public static int difficultyLevel; // 0 - кнопки, 1 - ввод количества
+    public static int difficultyLevel; 
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
     }
     public void SetEasyDifficulty()
     {   
-        difficultyLevel = 0; // Уровень с кнопками
+        difficultyLevel = 0; 
         LoadGameScene();
     }
 
     public void SetHardDifficulty()
     {
-        difficultyLevel = 1; // Уровень с вводом количества
+        difficultyLevel = 1; 
         LoadGameScene();
     }
 
