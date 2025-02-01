@@ -12,14 +12,14 @@ public class GameLevel : MonoBehaviour
     }
     public void SetEasyDifficulty()
     {   
-        difficultyLevel = 0; 
-        LoadGameScene();
+        difficultyLevel = 0;
+        Invoke("LoadGameScene", 0.5f);
     }
 
     public void SetHardDifficulty()
     {
-        difficultyLevel = 1; 
-        LoadGameScene();
+        difficultyLevel = 1;
+        Invoke("LoadGameScene", 0.5f);
     }
 
     private void LoadGameScene()
