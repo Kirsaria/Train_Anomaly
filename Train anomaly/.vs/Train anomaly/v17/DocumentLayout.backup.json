@@ -3,15 +3,15 @@
   "WorkspaceRootPath": "D:\\Programming\\TrainAnomalyGit\\Train_Anomaly\\Train anomaly\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{23655510-A890-B0ED-FB37-6B4903F02E5E}|Assembly-CSharp.csproj|D:\\Programming\\TrainAnomalyGit\\Train_Anomaly\\Train anomaly\\assets\\scripts\\interaction\\gamelevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{23655510-A890-B0ED-FB37-6B4903F02E5E}|Assembly-CSharp.csproj|d:\\programming\\trainanomalygit\\train_anomaly\\train anomaly\\assets\\scripts\\interaction\\gamelevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{23655510-A890-B0ED-FB37-6B4903F02E5E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interaction\\gamelevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{23655510-A890-B0ED-FB37-6B4903F02E5E}|Assembly-CSharp.csproj|d:\\programming\\trainanomalygit\\train_anomaly\\train anomaly\\assets\\scripts\\effectsscripts\\soundbutton1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{23655510-A890-B0ED-FB37-6B4903F02E5E}|Assembly-CSharp.csproj|D:\\Programming\\TrainAnomalyGit\\Train_Anomaly\\Train anomaly\\assets\\scripts\\effectsscripts\\soundbutton1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{23655510-A890-B0ED-FB37-6B4903F02E5E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\effectsscripts\\soundbutton1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{23655510-A890-B0ED-FB37-6B4903F02E5E}|Assembly-CSharp.csproj|d:\\programming\\trainanomalygit\\train_anomaly\\train anomaly\\assets\\scripts\\interaction\\doorinteract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{23655510-A890-B0ED-FB37-6B4903F02E5E}|Assembly-CSharp.csproj|D:\\Programming\\TrainAnomalyGit\\Train_Anomaly\\Train anomaly\\assets\\scripts\\interaction\\doorinteract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{23655510-A890-B0ED-FB37-6B4903F02E5E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interaction\\doorinteract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -39,8 +39,8 @@
       "RelativeMoniker": "D:0:0:{23655510-A890-B0ED-FB37-6B4903F02E5E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interaction\\playerinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Programming\\TrainAnomalyGit\\Train_Anomaly\\Train anomaly\\assets\\scripts\\interaction\\resetbuttonstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\scripts\\interaction\\resetbuttonstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Programming\\TrainAnomalyGit\\Train_Anomaly\\Train anomaly\\Assets\\Scripts\\Interaction\\ResetButtonState.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Interaction\\ResetButtonState.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,8 +62,7 @@
               "RelativeToolTip": "Assets\\Scripts\\EffectsScripts\\SoundButton1.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAxwBsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T13:01:39.113Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-01T13:01:39.113Z"
             },
             {
               "$type": "Document",
@@ -75,8 +74,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Interaction\\DoorInteract.cs",
               "ViewState": "AgIAAFgAAAAAAAAAAAAwwGwAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-25T10:24:08.079Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-25T10:24:08.079Z"
             },
             {
               "$type": "Document",
