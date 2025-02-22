@@ -5,12 +5,14 @@ using UnityEngine;
 public class Screamer_trigger : MonoBehaviour
 {
     public GameObject scream;
+    public GameObject trigger;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             scream.SetActive(true);
+            trigger.SetActive(false);
         }
     }
 }

@@ -1373,7 +1373,16 @@ MonoBehaviour:
   anomalyCountInput: {fileID: 1700033976}
   sceneNames:
   - SampleScene
+  - SampleScene1.1
+  - SampleScene1.2
   - AnomalyCarriage
+  - AnomalyCarriage2
+  - AnomalyCarriage2.1
+  - AnomalyCarriage3
+  - AnomalyCarriage3.1
+  - AnomalyCarriage3.2
+  - AnomalyCarriage4
+  - AnomalyCarriage4.1
   buttonClickSound: {fileID: 2021178756}
 --- !u!64 &669821621
 MeshCollider:

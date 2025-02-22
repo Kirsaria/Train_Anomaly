@@ -16,13 +16,14 @@ public class DoorInteract : MonoBehaviour, IInteractable
     public TMP_InputField anomalyCountInput;
     public List<string> sceneNames;
     public AudioSource buttonClickSound;
-
+    private AuthManager authManager;
     public void Start()
     {
         countAnomaly = FindObjectOfType<CountAnomaly>();
         yesButton.onClick.AddListener(OnYesClicked);
         noButton.onClick.AddListener(OnNoClicked);
         anomalyCountInput.onEndEdit.AddListener(OnEndEdit);
+        authManager = FindObjectOfType<AuthManager>();
     }
 
     public string GetDescription()
@@ -56,8 +57,9 @@ public class DoorInteract : MonoBehaviour, IInteractable
         Time.timeScale = 0;
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
-
-        if (GameLevel.difficultyLevel == 0)
+        string currentUsername = authManager.GetCurrentUser();
+        UserData userData = authManager.GetUserData(currentUsername);
+        if (userData.difficultyLevel == 0)
         {
             questionUIEasy.SetActive(true);
         }
@@ -72,7 +74,9 @@ public class DoorInteract : MonoBehaviour, IInteractable
         Time.timeScale = 1;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        if (GameLevel.difficultyLevel == 0)
+        string currentUsername = authManager.GetCurrentUser();
+        UserData userData = authManager.GetUserData(currentUsername);
+        if (userData.difficultyLevel == 0)
         {
             questionUIEasy.SetActive(false);
         }
@@ -106,17 +110,25 @@ public class DoorInteract : MonoBehaviour, IInteractable
 
     private void CheckAnswer(bool isYesClicked)
     {
-        switch (GameLevel.difficultyLevel)
+        string currentUsername = authManager.GetCurrentUser();
+        UserData userData = authManager.GetUserData(currentUsername);
+        switch (userData.difficultyLevel)
         {
             case 0:
                 if ((isYesClicked && countAnomaly.anomaliIs) || (!isYesClicked && !countAnomaly.anomaliIs))
                 {
                     Debug.Log("Correct");
                     Invoke("LoadNextScene", 0.5f);
+                    GameProgressManager.Instance.IncrementCorrectAnswer();
+                    if(GameProgressManager.Instance.IsGameComplete())
+                    {
+                        GameProgressManager.Instance.CompleteGame();
+                    }
                 }
                 else
                 {
                     Debug.Log("Incorrect");
+                    GameProgressManager.Instance.ResetCorrectAnswer();
                     Invoke("AgainScene", 0.5f);
                 }
                 CloseAnomalyWindow();
@@ -127,11 +139,17 @@ public class DoorInteract : MonoBehaviour, IInteractable
                 if (int.TryParse(anomalyCountInput.text, out inputCount) && inputCount == countAnomaly.countAnomaly)
                 {
                     Debug.Log("Correct");
+                    GameProgressManager.Instance.IncrementCorrectAnswer();
+                    if(GameProgressManager.Instance.IsGameComplete())
+                    {
+                        GameProgressManager.Instance.CompleteGame();
+                    }
                     LoadRandomScene();
                 }
                 else
                 {
                     Debug.Log("Incorrect");
+                    GameProgressManager.Instance.ResetCorrectAnswer();
                     SceneManager.LoadScene("MainMenu");
                 }
                 CloseAnomalyWindow();

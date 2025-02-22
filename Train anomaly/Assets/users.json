@@ -1,0 +1,34 @@
+{
+    "users": [
+        {
+            "username": "lolo",
+            "password": "1234",
+            "correctAnswers": 0,
+            "difficultyLevel": 0
+        },
+        {
+            "username": "choko",
+            "password": "boy",
+            "correctAnswers": 0,
+            "difficultyLevel": 0
+        },
+        {
+            "username": "chapa",
+            "password": "bi",
+            "correctAnswers": 0,
+            "difficultyLevel": 0
+        },
+        {
+            "username": "chipi",
+            "password": "43w",
+            "correctAnswers": 0,
+            "difficultyLevel": 0
+        },
+        {
+            "username": "rsaeeas",
+            "password": "JKBswfoH98w",
+            "correctAnswers": 0,
+            "difficultyLevel": 0
+        }
+    ]
+}

@@ -5,25 +5,41 @@ using UnityEngine.SceneManagement;
 
 public class GameLevel : MonoBehaviour
 {
-    public static int difficultyLevel; 
-    private void Awake()
+    private AuthManager authManager;
+
+    private void Start()
     {
-        DontDestroyOnLoad(gameObject);
+        authManager = FindObjectOfType<AuthManager>();
     }
+
     public void SetEasyDifficulty()
-    {   
-        difficultyLevel = 0;
+    {
+        SaveDifficultyLevel(0);
+        string currentUsername = authManager.GetCurrentUser();
+        authManager.ResetProgress(currentUsername);
         Invoke("LoadGameScene", 0.5f);
     }
 
     public void SetHardDifficulty()
     {
-        difficultyLevel = 1;
+        SaveDifficultyLevel(1);
+        string currentUsername = authManager.GetCurrentUser();
+        authManager.ResetProgress(currentUsername);
         Invoke("LoadGameScene", 0.5f);
+    }
+
+    private void SaveDifficultyLevel(int difficultyLevel)
+    {
+        string currentUsername = authManager.GetCurrentUser();
+        if (!string.IsNullOrEmpty(currentUsername))
+        {
+            authManager.UpdateDifficultyLevel(currentUsername, difficultyLevel);
+            Debug.Log("Уровень сложности сохранен: " + difficultyLevel);
+        }
     }
 
     private void LoadGameScene()
     {
-        SceneManager.LoadScene("SampleScene"); 
+        SceneManager.LoadScene("SampleScene");
     }
 }
