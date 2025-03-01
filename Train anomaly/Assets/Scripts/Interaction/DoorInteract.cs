@@ -17,8 +17,10 @@ public class DoorInteract : MonoBehaviour, IInteractable
     public List<string> sceneNames;
     public AudioSource buttonClickSound;
     private AuthManager authManager;
+    public int language;
     public void Start()
     {
+        language = PlayerPrefs.GetInt("language", language);
         countAnomaly = FindObjectOfType<CountAnomaly>();
         yesButton.onClick.AddListener(OnYesClicked);
         noButton.onClick.AddListener(OnNoClicked);
@@ -29,7 +31,10 @@ public class DoorInteract : MonoBehaviour, IInteractable
     public string GetDescription()
     {
         if (!isInteract)
-            return "Нажмите [E], чтобы взаимодействовать";
+            if (language == 0)
+                return "Нажмите [E], чтобы взаимодействовать";
+            else
+                return "Press [E] to interact";
         else return "";
     }
 
