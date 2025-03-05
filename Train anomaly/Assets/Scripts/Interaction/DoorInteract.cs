@@ -155,7 +155,7 @@ public class DoorInteract : MonoBehaviour, IInteractable
                 {
                     Debug.Log("Incorrect");
                     GameProgressManager.Instance.ResetCorrectAnswer();
-                    SceneManager.LoadScene("MainMenu");
+                    AgainScene();
                 }
                 CloseAnomalyWindow();
                 break;
@@ -167,7 +167,7 @@ public class DoorInteract : MonoBehaviour, IInteractable
     }
     private void AgainScene()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("AgainScene");
     }
     private void PlayButtonClickSound()
     {

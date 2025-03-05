@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Text.RegularExpressions;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -53,8 +54,7 @@ public class UIManager : MonoBehaviour
         {
             statusTextRegister.text = "Регистрация успешна!";
             progressManager.SetCurrentUser(username);
-            registerWindow.SetActive(false);
-            menuWindow.SetActive(true);
+            SceneManager.LoadScene("MainMenu");
         }
         else
         {
@@ -85,8 +85,7 @@ public class UIManager : MonoBehaviour
             progressManager.SetCurrentUser(username);
             UserData userData = authManager.GetUserData(username);
             Debug.Log($"Пользователь: {userData.username}, Правильных ответов: {userData.correctAnswers}");
-            loginWindow.SetActive(false);
-            menuWindow.SetActive(true);
+            SceneManager.LoadScene("MainMenu");
         }
         else
         {

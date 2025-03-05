@@ -41,4 +41,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AnomalyCarriage4.1.unity
     guid: 505aeadf4a9ef2f4b9d5f6fd44922d70
+  - enabled: 1
+    path: Assets/Scenes/AgainScene.unity
+    guid: 8086bac89a08dcf43828fb63318f536e
   m_configObjects: {}
