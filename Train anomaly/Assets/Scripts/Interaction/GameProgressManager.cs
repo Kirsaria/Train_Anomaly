@@ -50,7 +50,7 @@ public class GameProgressManager : MonoBehaviour
     public void CompleteGame()
     {
         Debug.Log("Игра завершена! Вы правильно ответили на 10 сцен.");
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("FinalScene");
     }
 
     public void SaveProgress()
